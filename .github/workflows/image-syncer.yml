@@ -20,7 +20,7 @@ env:
   KOLLA_BASE_DISTRO: ubuntu
   INSTALL_TYPE: source
   OPENSTACK_RELEASE: ussuri
-  ALIYUN_REGISTRY: registry.cn-shenzhen.aliyuncs.com
+  ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
   ALIYUN_NAMESPACE: farland-kolla
 
 jobs:
@@ -42,4 +42,4 @@ jobs:
         sed -i "s#PASS#${{ secrets.ALIYUN_PASSWORD }}#g" config.json
         wget https://github.com/AliyunContainerService/image-syncer/releases/download/v1.2.0/image-syncer-v1.2.0-linux-amd64.tar.gz
         tar -zxvf image-syncer-v1.2.0-linux-amd64.tar.gz
-        ./image-syncer --proc=50 --config=./config.json --registry=$ALIYUN_REGISTRY --namespace=$ALIYUN_NAMESPACE --retries=2
+        ./image-syncer --proc=50 --config=./config.json --registry=$ALIYUN_REGISTRY --namespace=$ALIYUN_NAMESPACE --retries=2 --log=./docker.log
