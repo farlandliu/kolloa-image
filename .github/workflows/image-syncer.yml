@@ -18,10 +18,10 @@ on:
 env:
   DOCKER_NAMESPACE: kolla
   KOLLA_BASE_DISTRO: ubuntu
-  INSTALL_TYPE: source
-  OPENSTACK_RELEASE: ussuri
+  INSTALL_TYPE: binary
+  OPENSTACK_RELEASE: wallaby
   ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  ALIYUN_NAMESPACE: farland-kolla
+  ALIYUN_NAMESPACE: kollanew
 
 jobs:
   get-kolla-images:
