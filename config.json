@@ -6,6 +6,6 @@
         }
     },
    "images" : {
-        "ghcr.io/azuracast/azuracast:stable":"registry.cn-hangzhou.aliyuncs.com/kollanew/azuracast:stable"
+        "ghcr.io/azuracast/azuracast:stable":"registry.cn-hangzhou.aliyuncs.com/farlandliu/azuracast:stable"
    } 
 }
